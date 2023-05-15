@@ -1,0 +1,23 @@
+import turtle
+
+# Создание экземпляра черепахи
+t = turtle.Turtle()
+
+# Настройка экрана
+screen = turtle.Screen()
+screen.bgcolor("black")
+screen.title("Spiral Art")
+
+# Настройка черепахи
+t.speed(0)
+t.pensize(2)
+colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+
+# Рисование спирали
+for i in range(200):
+    t.color(colors[i % len(colors)])
+    t.forward(i)
+    t.left(59)
+
+# Закрытие окна при клике
+turtle.exitonclick()
